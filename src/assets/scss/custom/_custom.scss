@@ -1,0 +1,226 @@
+@import "map/widgets/widgets";
+@import "language-selector";
+@import "page-share-section";
+@import "map/lcovid-map";
+@import "dashboard/custom-dashboard";
+@import "data-center/custom-data-center";
+
+/**
+CUSTOM WORLD
+ */
+a {
+  text-decoration: none !important;
+  color: $main-light-green-color;
+
+  &:hover {
+    color: $main-dark-green-color;
+  }
+}
+
+/**
+CUSTOM CLASSES
+ */
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: $main-light-green-color !important;
+  background-color: $main-light-green-color !important;
+}
+
+.pretty {
+  margin: 0;
+
+  &.p-icon .state .icon {
+    position: initial;
+  }
+}
+
+.badge-purple {
+  background-color: rgb(151, 133, 255);
+  color: white;
+}
+
+.fb-group {
+
+  width: 100%;
+  height: 100%;
+
+  span[style], iframe[style] {
+    min-width: 100% !important;
+    min-height: 100% !important;
+
+    visibility: visible !important;
+  }
+}
+
+.custom-b-table {
+  &.b-table-sticky-header {
+    max-height: 800px;
+
+    @include media-breakpoint-down(xs) {
+      max-height: 500px;
+    }
+  }
+
+  &.b-table > thead > tr > th,
+  .b-table > thead > tr > th {
+    vertical-align: middle !important;
+    text-align: center !important;
+  }
+
+  &.b-table-stacked > tbody tr:not(.b-table-empty-row) {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    border: 2px solid $main-light-green-color;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: .8rem !important;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: .7rem !important;
+  }
+}
+
+.custom-b-pagination {
+  .page-link {
+    color: $main-light-green-color;
+
+    &:hover {
+      color: $main-dark-green-color;
+    }
+  }
+;
+
+  .page-item.active .page-link {
+    background-color: $main-light-green-color;
+    border-color: $main-light-green-color;
+  }
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: $main-light-green-color;
+  color: white !important;
+}
+
+.show-type-hint {
+  margin-top: .5rem;
+  margin-left: .1rem;
+  font-size: .75em;
+
+  b {
+    color: $main-light-green-color;
+  }
+}
+
+.custom-tabs {
+  .nav-link {
+    font-weight: 600;
+
+    @include transition($transition-base);
+
+    &.active {
+      background-color: $main-light-green-color;
+      color: white;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: .9em;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: .8em;
+    }
+  }
+}
+
+.custom-vs-fw-select {
+  max-width: 100% !important;
+}
+
+.vs-select__options__content {
+
+  .vs-select__option.activeOption {
+    background: lighten($main-light-green-color, 50) !important;
+    color: $main-light-green-color !important;
+  }
+
+  .vs-select__option:hover:not(:disabled) {
+    color: $main-light-green-color !important;
+  }
+}
+
+.custom-datetime {
+  .vdatetime-popup__header,
+  .vdatetime-calendar__month__day--selected > span > span,
+  .vdatetime-calendar__month__day--selected:hover > span > span {
+    background: $main-light-green-color;
+  }
+
+  .vdatetime-year-picker__item--selected,
+  .vdatetime-time-picker__item--selected,
+  .vdatetime-popup__actions__button {
+    color: $main-light-green-color;
+  }
+}
+
+.custom-alert {
+
+  .alert-title {
+
+    font-size: 1.1em;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1em;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: .9em;
+    }
+  }
+
+  .alert-content {
+    max-height: 250px;
+    overflow: scroll;
+  }
+}
+
+/**
+ADDITIONAL CLASSES
+ */
+.cusor-pointer {
+  cursor: pointer !important;
+}
+
+/**
+TEXT CLASSES
+ */
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.text-light-green {
+  color: $main-light-green-color
+}
+
+.text-new-case {
+  color: $new-case-color;
+}
+
+.text-new-dead {
+  color: $new-dead-color;
+}
+
+/**
+BACKGROUND CLASSES
+ */
+@include gen-lightens("bg-new-case", $new-case-color);
+@include gen-lightens("bg-new-dead", $new-dead-color);
+@include gen-lightens("bg-dead", $dead-color);
+
+/**
+CASES VARIANT
+ */
+@include gen-table-case-variants("new-case", $new-case-color);
+@include gen-table-case-variants("new-dead", $new-dead-color);
+@include gen-table-case-variants("dead-rate", $dead-color);

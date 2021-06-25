@@ -1,0 +1,72 @@
+@mixin gen-lightens($bg, $color) {
+  @for $i from 0 to 110 {
+    @if ($i == 0) {
+      .#{$bg} {
+        background-color: $color;
+      }
+    } @else if ($i % 10 == 0) {
+      .#{$bg}-#{$i} {
+        background-color: lighten($color, $i);
+      }
+    }
+  }
+}
+
+@mixin gen-darkens($bg, $color) {
+  @for $i from 0 to 110 {
+    @if ($i == 0) {
+      .#{$bg} {
+        background-color: $color;
+      }
+    } @else if ($i % 10 == 0) {
+      .#{$bg}-#{$i} {
+        background-color: lighten($color, $i);
+      }
+    }
+  }
+}
+
+@mixin gen-table-case-variants($case, $color) {
+  $levels: "high", "medium", "low", "vlow", "none";
+  $level-lighten: 0%, 8%, 14%, 20%, -1%;
+
+  @for $i from 1 through length($levels) {
+    $lv: nth($levels, $i);
+    $strength: nth($level-lighten, $i);
+
+    .table-#{$case}-#{$lv},
+    .table-#{$case}-#{$lv} > td,
+    .table-#{$case}-#{$lv} > th  {
+
+      @if ($strength != -1%) {
+        background-color: lighten($color, $strength);
+      } @else {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@mixin media-block {
+  display: block;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+    max-height: 250px;
+  }
+}
+
+@mixin media-flex {
+  display: flex;
+
+  img {
+    width: 200px;
+    max-width: 200px;
+
+    height: auto;
+    max-height: 200px;
+  }
+}

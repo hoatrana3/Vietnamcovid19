@@ -1,0 +1,132 @@
+.page-share-section {
+  width: 100%;
+  height: 600px;
+
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    height: 650px;
+  }
+
+  overflow: visible;
+
+  background: url("/assets/img/page-share-bg.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .share-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+
+    max-width: 500px;
+
+    @include media-breakpoint-down(sm) {
+      width: 85%;
+      max-width: 85%;
+    }
+
+    h5 {
+      font-weight: bold;
+      font-size: 1.7em;
+      text-transform: uppercase;
+      color: #d0ffc2;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1.5em;
+      }
+    }
+
+    .btn-share {
+      margin-top: 20px;
+
+      border: 1px solid white;
+      border-radius: 5px;
+      background: transparent;
+
+      padding: 5px 10px;
+
+      color: white;
+
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 10px;
+      }
+
+      @include transition($transition-base);
+
+      &:hover {
+        background: white;
+        color: #3ac268;
+      }
+    }
+
+    .share-social-list {
+
+      .share-copy-wrapper {
+
+        margin-top: 20px;
+
+        position: relative;
+
+        width: 280px;
+
+        display: flex;
+
+        .copy-input {
+          width: 100%;
+          border-radius: 20px;
+
+          border: 1px solid white;
+          background: transparent;
+
+          color: white;
+
+          padding: 5px 30px 5px 10px;
+        }
+
+        .copy-icon {
+          position: absolute;
+          right: 15px;
+          top: 6px;
+
+          cursor: pointer;
+
+          &:hover {
+            color: #4f5052;
+          }
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .share-item {
+        display: inline-block;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-right: 20px;
+        vertical-align: top;
+
+        width: 30px;
+        height: 30px;
+
+        border-radius: 50%;
+
+        @include transition($transition-base);
+
+        &:hover {
+          box-shadow: $box-shadow;
+          transform: scale(1.2, 1.2);
+        }
+      }
+    }
+  }
+}

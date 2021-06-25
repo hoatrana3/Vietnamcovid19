@@ -1,0 +1,60 @@
+.map-bottom-navigation {
+  width: 300px;
+  height: 30px;
+
+  background-color: white;
+
+  cursor: pointer;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: $map-box-shadow;
+
+  .nav-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+
+    position: relative;
+
+    color: #414141;
+
+    @include transition($transition-base);
+
+    &:hover, &:focus, &:active {
+      background-color: $main-light-green-color;
+      color: white;
+    }
+
+    &:not(:last-of-type) {
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        content: '';
+        height: 50%;
+        width: 1px;
+        background-color: $main-light-green-color;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: calc(100% - 20px);
+
+    .nav-item {
+      border-radius: 0 !important;
+    }
+  }
+}

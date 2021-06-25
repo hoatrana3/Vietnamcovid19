@@ -1,0 +1,105 @@
+.card-youtube-video {
+
+  h5 {
+    font-size: 1.1em;
+    font-weight: 600;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.05em;
+    }
+
+    @include transition($transition-base);
+  }
+
+  &:hover, &:focus, &:active {
+    h5 {
+      color: rgb(195, 24, 30);
+    }
+  }
+
+  cursor: pointer;
+
+  p {
+    font-size: .85em;
+  }
+
+  .video-minimized {
+
+    color: black;
+
+    .media {
+
+      margin: 30px 0 0;
+
+      @include media-flex();
+
+      @include media-breakpoint-between(xs, sm) {
+        @include media-block();
+      }
+
+      @include media-breakpoint-down(sm) {
+        @include media-flex();
+      }
+
+      @media only screen and (max-width: 430px)  {
+        @include media-block();
+      }
+
+      div:first-of-type {
+        position: relative;
+        z-index: 1;
+
+        &:after {
+          content: '';
+          width: 100%;
+          height: calc(100% - 1rem);
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+
+          background-image: url("/assets/img/dashboard/youtube-bg.jpg");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          opacity: 0;
+
+          border-radius: 0.25rem;
+
+          @include transition($transition-base);
+        }
+      }
+    }
+
+    &:hover, &:focus, &:active {
+      .media {
+        div:first-of-type {
+          &:after {
+            opacity: .85;
+          }
+        }
+      }
+    }
+  }
+
+  .video-full {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+
+    hr {
+      line-height: 1em;
+      position: relative;
+      border: none;
+      height: 3px;
+      color: rgb(195, 24, 30);
+      background-color: rgb(195, 24, 30);
+
+      &:last-of-type {
+        margin-bottom: 0;
+        height: 1.5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+$button-colour: #009ED8;
+$button-text: #ffffff;
+$regular-text: #333;
+
+.dashboard-footer {
+  width: 100%;
+  height: auto;
+
+  // We need add the amount half of height of page share section to margin-top,
+  // but we ignore the height 650px in small device of page share section, we just get 300px here
+  margin-top: calc(5rem + 300px);
+  @include media-breakpoint-down(lg) {
+    margin-top: calc(2.5rem + 300px);
+  }
+
+  .footer-main {
+    width: 100%;
+
+    background-color: white;
+
+    //position: relative;
+
+    // We need add the amount half of height of page share section to padding-top,
+    // but we ignore the height 650px in small device of page share section, we just get 300px here
+    padding-top: 300px;
+
+    .main-share {
+      margin-top: -600px;
+    }
+
+    .footer-section {
+
+      padding: 50px;
+
+      .section-image {
+        margin-left: 50%;
+        height: 200px;
+        max-width: 100%;
+        transform: translate(-50%, 0);
+      }
+
+      .contact-button {
+        display: inline-block;
+
+        -webkit-font-smoothing: antialiased;
+        position: relative;
+
+        padding: .8em 1.4em;
+        padding-right: 4.7em;
+
+        border: none;
+        color: white;
+
+        width: 100%;
+
+        @include transition($transition-base);
+
+        &:before,
+        &:after {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          padding-top: inherit;
+          padding-bottom: inherit;
+          width: 2.8em;
+          content: "\00a0";
+          font-family: "Font Awesome 5 Free";
+          font-size: 1.2em;
+          text-align: center;
+
+          transition: .2s;
+          transform-origin: 50% 60%;
+        }
+
+        a {
+          color: white;
+
+          div {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        &.email {
+          background: $main-light-green-color;
+          &:hover {
+            background: darken($main-light-green-color, 10%);
+          }
+          &:active,
+          &:focus {
+            background: darken($main-light-green-color, 20%);
+          }
+          &:after {
+            content: "\f1d8";
+          }
+          &:hover:after {
+            -webkit-animation: none;
+            -webkit-transform: skew(-20deg);
+            animation: none;
+            transform: skew(-20deg);
+            text-indent: .1em;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-policy {
+    width: 100%;
+
+    background-image: linear-gradient(to right, #092909, #0b330e, #0e3d11, #114814, #155317, #205b18, #2a6218, #346a18, #447017, #547615, #637c15, #738116);
+    box-shadow: 0px -7px 10px 0px rgba(0, 0, 0, 0.3);
+
+    color: white;
+    font-weight: 600;
+    text-align: center;
+
+    padding: 20px 10px;
+
+    .policy-conntent {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}

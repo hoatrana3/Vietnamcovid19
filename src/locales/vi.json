@@ -1,0 +1,236 @@
+{
+  "general": {
+    "cases": "Ca nhiễm",
+    "short-cases": "Ca",
+    "number-of-case": "Số lượng các ca nhiễm",
+    "age": "Độ tuổi",
+    "gender": "Giới tính",
+    "city-or-province": "Tỉnh, thành phố",
+    "infection-source": "Nguồn lây nhiễm",
+    "treatment-place": "Địa điểm điều trị hiện tại",
+    "undefined": "[Chưa xác định]",
+    "failed-fetch-data": "Lấy dữ liệu thất bại!",
+    "contact-us": "Liên hệ",
+    "terms-of-use": "Điều khoản sử dụng",
+    "back": "Quay lại",
+    "see-all": "Xem tất cả",
+    "social": "Cộng đồng",
+    "empty-data": "Không có dữ liệu để hiển thị",
+    "empty-filter-data": "Không có dữ liệu mà bạn đang tìm",
+    "searching": "Đang tìm kiếm...",
+    "close": "Đóng",
+    "open": "Mở",
+    "dashboard": "Dashboard",
+    "more-info": "Thông tin thêm",
+    "share-with-friends": "Chia sẻ cho bạn bè",
+    "share-description": "Hãy chia sẻ trang web này cho bạn bè, người thân của bạn trên mạng xã hội để <b>mọi người dân Việt Nam cũng như Thế giới cùng nhau chung tay chiến thắng đại dịch</b> nhé!",
+    "share-now": "Chia sẻ ngay",
+    "read-now": "Đọc ngay",
+    "success-copy-to-share": "Sao chép thành công, hãy chia sẻ với thật nhiều bạn bè nhé...",
+    "clear": "Xoá",
+    "today": "Hôm nay",
+    "yesterday": "Hôm qua",
+    "ppm": "/ phần triệu (PPM)",
+    "overview": "Tổng quan",
+    "data-center": "Trung tâm Dữ liệu",
+    "exit": "Thoát",
+    "next": "Tiếp tục",
+    "select": "Chọn",
+    "not-remind-again": "Không nhắc lại tôi lần sau",
+    "remain": "Còn lại"
+  },
+  "gender": {
+    "male": "Nam",
+    "female": "Nữ",
+    "select-gender-to-see-more": "Chọn giới tính để xem thêm chi tiết các ca nhiễm của giới tính đó."
+  },
+  "ages": {
+    "from-to": "Từ {0} đến {1} tuổi",
+    "above": "Trên {0} tuổi"
+  },
+  "languages": {
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "hints": {
+    "hint": "Gợi ý",
+    "user-manual": "Hướng dẫn sử dụng",
+    "select-nation": "<b>Chọn quốc gia: </b>Ấn vào quốc gia trên bản đồ tương tác hoặc chọn qua ô tìm kiếm quốc gia.",
+    "select-date": "<b>Chọn thời gian: </b>Ấn vào khung thời gian hiển thị để chọn lại thời gian dữ liệu được hiển thị trên bản đồ tương tác.",
+    "select-case-type": "<b>Chọn loại ca nhiễm: </b>Ấn vào 1 trong 4 ô tổng quan ca nhiễm để chọn dữ liệu loại ca nhiễm cần hiển thị trên bản đồ tương tác",
+    "other-options": "<b>Một số hỗ trợ khác: </b>Một số công cụ khác cũng được cung cấp phía góc dưới phải bản đồ tương tác.",
+    "notes-on-data": "Lưu ý về dữ liệu",
+    "approximate-data": "<b>Dữ liệu mang tính tương đối: </b>Số liệu ca nhiễm trên thế giới luôn thay đổi liên tục, dữ liệu chúng tôi cung cấp có thể có sự chênh lệch và chậm hơn các báo cáo thực tế.",
+    "accuracy-data": "<b>Tính chính xác của dữ liệu: </b>Dữ liệu chúng tôi cung cấp chỉ bao gồm thông tin về các ca nhiễm đã được công bố công khai bởi các quốc gia. Một số quốc gia có thể chưa có dữ liệu bởi vì họ vẫn chưa công bố các số liệu, báo cáo một cách công khai.",
+    "differences-data": "<b>Sự khác nhau của dữ liệu: </b>Dữ liệu ở nhiều nơi có thể có sự khác biệt không đáng kể vì có nhiều nguồn khác nhau đang theo dõi và tổng hợp dữ liệu Covid-19. Họ có thể cập nhật vào những thời điểm khác nhau và có những cách thu thập dữ liệu khác nhau.",
+    "more-about-vn": "Xem thêm về Việt Nam?",
+    "vn-in-data-center": "<b>Trung tâm Dữ liệu: </b>Xem thêm các thông tin khác về tình hình Covid-19 ở Việt Nam tại Trung tâm dữ liệu (số liệu, biểu đồ, lịch sử,...).",
+    "vn-in-map": "<b>Bản đồ Việt Nam: </b>Bản đồ chi tiết tất cả mọi thông tin về các ca nhiễm Covid-19 tại Việt Nam với nhiều công cụ hữu ích (tra cứu, địa điểm, chi tiết, sự lây nhiễm, ...).",
+    "more-about-world": "Xem thêm về Thế giới?",
+    "world-in-data-center": "<b>Trung tâm Dữ liệu: </b>Xem thêm các thông tin cụ thể về tình hình Covid-19 ở các quốc gia trên Thế giới tại Trung tâm dữ liệu (số liệu, biểu đồ, lịch sử,...).",
+    "useful-features": "Tính năng hữu ích",
+    "useful-features-desc": "Chúng tôi cũng cung cấp các tính năng hữu ích khác nhằm giúp bạn nắm bắt được nhiều thông tin hơn về tình hình Covid-19, hãy xem qua nhé!"
+  },
+  "cases": {
+    "case-num": "Ca số",
+    "case-num-long": "Ca nhiễm số",
+    "confirmed": "Xác nhận nhiễm",
+    "being-treated": "Đang điều trị",
+    "recovered": "Đã bình phục",
+    "dead": "Đã tử vong",
+    "others": "Các ca nhiễm khác",
+    "suspected": "Nghi ngờ nhiễm bệnh",
+    "being-isolated": "Đã và đang bị cách ly",
+    "in-mild-condition": "trong tình trạng ổn định",
+    "in-serious-condition": "trong tình trạng nghiêm trọng",
+    "confirmed-date": "Ngày tiếp nhận",
+    "nationality": "Quốc tịch",
+    "status": "Tình trạng",
+    "discharge-date": "Ngày xuất viện",
+    "dead-date": "Ngày tử vong",
+    "treatment-place": "Nơi điều trị",
+    "infected-from": "Lây nhiễm từ",
+    "infected-to": "Lây nhiễm sang",
+    "route": "Lộ trình",
+    "isolated-date": "Ngày bị cách ly",
+    "case-suspected": "Ca nghi nhiễm",
+    "see-all-relations": "Xem các ca liên quan",
+    "zoom-to-case": "Phóng to ca nhiễm",
+    "note": "Ghi chú",
+    "type": {
+      "new-case": "Ca mới (0 - 2 ngày)",
+      "old-case": "Ca cũ (trên 2 ngày)",
+      "discharge-case": "Ca bình phục",
+      "isolated-place": "Địa điểm cách ly"
+    }
+  },
+  "places": {
+    "world": "Thế giới",
+    "worldwide": "Toàn thế giới",
+    "around-world": "Trên toàn thế giới",
+    "vn": "Việt Nam",
+    "region": "Vùng miền",
+    "nation": "Quốc gia",
+    "other-nations": "Các quốc gia khác",
+    "not-found-nation": "Không tìm thấy quốc gia bạn cần",
+    "select-nation": "Chọn quốc gia",
+    "in-nation": "Tại quốc gia: {0}",
+    "regions": "Các vùng miền",
+    "nations": "Các quốc gia",
+    "all-regions": "Tất cả vùng miền",
+    "all-nations": "Tất cả quốc gia",
+    "world-regions": "Các vùng miền trên toàn Thế giới",
+    "world-nations": "Các quốc gia trên toàn Thế giới",
+    "g8-nations": "nhóm quốc gia G8",
+    "all-g8-nations": "Toàn bộ nhóm G8",
+    "g20-nations": "nhóm quốc gia G20",
+    "all-g20-nations": "Toàn bộ nhóm G20"
+  },
+  "center": {
+    "total-cases-by-day": "Số lượng ca nhiễm theo ngày",
+    "changes-total-cases-by-day": "Biến đổi số lượng ca nhiễm theo ngày"
+  },
+  "redirect": {
+    "go-to-vn-map": "Bản đồ Việt Nam",
+    "go-to-vn-dashboard": "Dashboard Việt Nam",
+    "go-to-world-dashboard": "Dashboard Thế giới",
+    "go-now": "Truy cập ngay"
+  },
+  "dashboard": {
+    "header": {
+      "db-title": "Dashboard",
+      "covid19-info": "Thông tin Covid-19",
+      "world-covid19-info": "Thông tin Covid-19 Thế giới",
+      "vn-covid19-info": "Thông tin Covid-19 Việt Nam"
+    },
+    "body": {
+      "cases-overview": "Tổng quan các ca nhiễm",
+      "cases-chart-tracking": "Theo dõi biểu đồ tổng quan các ca nhiễm một cách trực quan",
+      "distribution-by": "Phân bố các ca nhiễm theo {0}",
+      "covid19-timeline": "Dòng thời gian Covid-19",
+      "data-sheet-by": "Bảng số liệu theo {0}",
+      "tracking-covid19-data-in": "Theo dõi số liệu Covid-19 ở {0}"
+    },
+    "footer": {
+      "we-are-improving": "Chúng tôi đang nỗ lực để hoàn thiện hơn...",
+      "copyright": "© Bản quyền Vietnamcovid19.info - Toàn quyền sở hữu"
+    },
+    "news": {
+      "lastest-news": "Tin tức mới nhất",
+      "description": "Tổng hợp 20 tin tức mới nhất từ các trang tin tức chất lượng"
+    },
+    "timeline": {
+      "description": "Tổng hợp toàn bộ những thông tin, sự kiện quan trong theo các môc thời gian"
+    },
+    "youtube": {
+      "covid-on-youtube": "Covid-19 trên Youtube"
+    },
+    "table": {
+      "type-to-search": "Nhập để Tìm kiếm",
+      "total-infection": "Tổng nhiễm",
+      "new-infection": "Nhiễm mới",
+      "total-recoveries": "Tổng bình phục",
+      "total-deaths": "Tổng tử vong",
+      "new-deaths": "Tử vong mới",
+      "day-infection-rate": "Tăng nhiễm 24h",
+      "day-death-rate": "Tăng tử vong 24h",
+      "death-rate": "Tỉ lệ tử vong",
+      "pop-in-places": "Dân số (nơi có ca nhiễm)",
+      "rate-pop-infected": "Tỉ lệ dân số nhiễm bệnh",
+      "pop-density": "Mật độ dân cư (Người / km2)",
+      "rate-urban-pop": "Tỉ lệ dân số thành thị",
+      "medium-age": "Độ tuổi trung bình dân số",
+      "show-in-grid": "Hiển thị dưới dạng bảng",
+      "show-in-stack": "Hiển thị dưới dạng xếp chồng",
+      "landscape-to-see-more": "Hãy quay ngang màn hình để xem được nhiều dữ liệu trong bảng hơn!",
+      "total-test":  "Tổng xét nghiệm",
+      "total_test_percent" : "Tổng xét nghiệm / dân số"
+    }
+  },
+  "map": {
+    "address": "Địa điểm",
+    "coordinate": "Toạ độ",
+    "press": "Nhấn",
+    "exit": "Thoát",
+    "searched-place": "Nơi bạn tìm kiếm",
+    "your-location": "Vị trí của bạn",
+    "you-are-here": "Bạn đang ở đây!",
+    "belong-to-nation": "Thuộc quốc gia",
+    "click-on-the-map": "hoặc vào khoảng trống trên bản đồ",
+    "to-exit-detail-mode": "để thoát chế độ xem chi tiết",
+    "map-settings": "Cài đặt bản đồ",
+    "paracel-islands": "Quần đảo Hoàng Sa",
+    "spratly-islands": "Quần đảo Trường Sa",
+    "autocomplete-placeholder": "Địa điểm hoặc số ca nhiễm cần tìm?",
+    "settings": {
+      "show-info-board": "Hiển thị bảng thông tin",
+      "collapse-cases": "Thu gọn các ca nhiễm",
+      "click-map-to-exit-detail": "Nhấn vào khoảng trống để thoát xem chi tiết",
+      "auto-adjust-day-and-night": "Tự động hiệu chỉnh sáng tối",
+      "cover-all-relation": "Tự động chỉnh tầm nhìn bao trọn các ca liên quan"
+    },
+    "tool": {
+      "toolbar": "Thanh công cụ",
+      "zoom-in": "Phóng to",
+      "zoom-out": "Thu nhỏ",
+      "reset-default": "Đặt lại mặc định"
+    },
+    "if-drawer": {
+      "map-title": "<h5>Bản đồ thông tin</h5><h4>Covid-19 Việt Nam</h4>",
+      "fb-social": "Cộng đồng Facebook",
+      "donate-prevent-pandemic": "Ủng hộ phòng chống dịch",
+      "community-feedback": "Phản hồi cộng đồng",
+      "government-info": "Thông tin chính phủ"
+    }
+  },
+  "errors": {
+    "failed-locate": "Không thể xác định vị trí",
+    "cant-get-your-location": "Không xác định được vị trí của bạn!",
+    "error-connection": "Lấy dữ liệu không thành công",
+    "error-ask-refesh": "Dữ liệu mới có thể đang được cập nhật, vui lòng thử tải lại trang sau ít phút.",
+    "no-permission-locate": "Chưa có quyền truy cập vị trí trên trình duyệt, vui lòng kiểm tra lại cài đặt của bạn.",
+    "country-not-updated": "Quốc gia chưa cập nhật",
+    "country-not-updated-explain": "Rất tiếc, quốc gia bạn chọn hiện tại chưa được cập nhật lên bản đồ, bạn có thể xem thêm nhiều quốc gia khác mà chúng tôi đã cung cấp."
+  },
+  "terms-of-use-content": "<div class=WordSection1>\n\n<p class=MsoNormal><b><span lang=EN style='font-size:15.0pt;line-height:115%'>ĐIỀU\nKHOẢN SỬ DỤNG</span></b></p>\n\n<p class=MsoNormal><b><span lang=EN style='font-size:15.0pt;line-height:115%'>&nbsp;</span></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Thỏa thuận sử dụng và bảo mật này (sau đây gọi là “Thỏa thuận”)\nđược lập ra bởi và giữa bạn (“bạn”) và Vietnamcovid19.info\n(“Vietnamcovid19.info” hoặc “chúng tôi”) về việc sử dụng bất kỳ hay tất cả các\nloại thông tin trên </span><span lang=EN><a href=\"http://vietnamcovid19.info/\"><span\nstyle='font-size:12.0pt;line-height:115%;color:#1155CC'>http://vietnamcovid19.info/</span></a></span><span\nlang=EN style='font-size:12.0pt;line-height:115%;color:#212529'>. Bằng việc sử\ndụng Dịch vụ, bạn đồng ý chịu ràng buộc bởi những điều khoản và điều kiện này.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Thuật ngữ “bạn” để chỉ tất cả các cá nhân và/hoặc các tổ chức\ntruy cập vào Vietnamcovid19.info vì bất kỳ lý do nào.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><span lang=EN style='font-size:12.0pt;line-height:115%'>I.\nThỏa thuận sử dụng</span></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><i><span lang=EN style='font-size:12.0pt;line-height:\n115%;color:#212529'>I.1. Quyền gắn với Dịch vụ.</span></i></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Vietnamcovid19.info sở hữu và duy trì mọi quyền lợi sở hữu trí\ntuệ đối với Dịch vụ của mình nhưng Vietnamcovid19.info không tuyên bố là mình\ncó quyền sở hữu trí tuệ đối với các thông tin được đăng trên Vietnamcovid19.info.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Vietnamcovid19.info cũng không chịu trách nhiệm về các thông\ntin, dịch vụ và nội dung của những website được kết nối. Bạn là người chịu hoàn\ntoàn trách nhiệm trong việc sử dụng, khai thác các thông tin này.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Thông tin trên Vietnamcovid19.info chỉ mang tính chất tham khảo\nvà tập hợp từ thông tin công bố bởi bộ y tế </span><span lang=EN><a\nhref=\"https://ncov.moh.gov.vn/\"><span style='font-size:12.0pt;line-height:115%;\ncolor:#1155CC'>https://ncov.moh.gov.vn/</span></a></span><span lang=EN\nstyle='font-size:12.0pt;line-height:115%;color:#212529'>, cổng thông tin chính\nphủ Việt Nam </span><span lang=EN><a\nhref=\"https://www.facebook.com/thongtinchinhphu/\"><span style='font-size:12.0pt;\nline-height:115%;color:#1155CC'>https://www.facebook.com/thongtinchinhphu/</span></a></span><span\nlang=EN style='font-size:12.0pt;line-height:115%;color:#212529'>, trang thông\ntin chính thức về các giải pháp CNTT hỗ trợ, phòng, chống dịch Covid-19 </span><span\nlang=EN><a href=\"https://ncovi.vn/\"><span style='font-size:12.0pt;line-height:\n115%;color:#1155CC'>https://ncovi.vn/</span></a></span><span lang=EN\nstyle='font-size:12.0pt;line-height:115%;color:#212529'> cũng như các website\nthông tin báo chí được cấp phép tại Việt Nam. </span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Thông tin Covid-19 của thế giới được lấy từ nguồn WHO </span><span\nlang=EN><a href=\"https://who.sprinklr.com/\"><span style='font-size:12.0pt;\nline-height:115%;color:#1155CC'>https://who.sprinklr.com/</span></a></span><span\nlang=EN style='font-size:12.0pt;line-height:115%;color:#212529'>, Đại học Johns\nHopkins </span><span lang=EN><a href=\"https://coronavirus.jhu.edu/map.html\"><span\nstyle='font-size:12.0pt;line-height:115%;color:#1155CC'>https://coronavirus.jhu.edu/map.html</span></a></span><span\nlang=EN style='font-size:12.0pt;line-height:115%;color:#212529'> và trang web\nWorldometers </span><span lang=EN><a\nhref=\"https://www.worldometers.info/coronavirus/\"><span style='font-size:12.0pt;\nline-height:115%;color:#1155CC'>https://www.worldometers.info/coronavirus/</span></a></span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Thông tin miễn phí với tính chất phục vụ cộng đồng để góp phần đẩy\nlùi dịch Covid-19 tại Việt Nam. Bạn luôn nên tham khảo thông tin chính phủ và bộ\nY tế để có thông tin cập nhật nhất. </span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><i><span lang=EN style='font-size:12.0pt;line-height:\n115%;color:#212529'>I.2. Sử dụng và chấm dứt sử dụng Dịch vụ.</span></i></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Bạn chỉ có thể sử dụng nội dung của Dịch vụ cho mục đích cá nhân\ncủa riêng bạn (cụ thể là không dùng cho mục đích thương mại) và không được sao\nchép, thay đổi, sửa đổi, tạo ra các tác phẩm phái sinh hoặc thể hiện một cách\ncông khai bất kỳ nội dung nào của Dịch vụ. Chẳng hạn, bạn không được sử dụng Dịch\nvụ để bán một sản phẩm hay dịch vụ; hay sử dụng Dịch vụ để tăng số lượt truy cập\ntới trang web của bạn vì mục đích thương mại; hay sử dụng các kết quả từ Dịch vụ\nrồi định dạng lại và thể hiện công khai chúng, hay sử dụng các công cụ hoặc tài\nliệu khác để theo dõi hay sao chép bất kỳ nội dung nào từ Dịch vụ. Nếu bạn\nkhông chắc liệu dự định sử dụng Dịch vụ của bạn có được phép hay không, xin vui\nlòng liên hệ với chúng tôi.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Vietnamcovid19.info sẽ không chịu trách nhiệm đối với việc gián\nđoạn, ngừng hoạt động, mất hoặc sai lệch dữ liệu từ những hành động tấn công của\ncá nhân hay tổ chức nào khác, cũng như về các sự cố kỹ thuật trong khi cung cấp\nDịch vụ. </span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Vietnamcovid19.info cũng không chịu trách nhiệm về các tổn thất\nphát sinh từ việc sử dụng Dịch vụ hoặc từ sự tương tác giữa bạn với những người\ndùng khác.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Vietnamcovid19.info có quyền đơn phương đình chỉ hoặc chấm dứt Dịch\nvụ hoặc sự truy cập của bạn tới Dịch vụ.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><span lang=EN style='font-size:12.0pt;line-height:115%'>II.\nThỏa thuận bảo mật</span></b></p>\n\n<p class=MsoNormal><b><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></b></p>\n\n<p class=MsoNormal><b><i><span lang=EN style='font-size:12.0pt;line-height:\n115%;color:#212529'>II.1. Những thông tin mà chúng tôi thu thập</span></i></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Mỗi khi bạn truy cập Dịch vụ, hệ thống của Vietnamcovid19.info sẽ\nsử dụng cookies và các kỹ thuật khác để lưu lại những hoạt động của bạn trên\nVietnamcovid19.info. Server của Vietnamcovid19.info cũng sẽ tự động ghi lại\nthông tin khi bạn truy cập trang này và sử dụng các Dịch vụ bao gồm nhưng không\ngiới hạn URL, địa chỉ IP, loại trình duyệt, ngôn ngữ, ngày giờ truy cập hoặc sử\ndụng Dịch vụ.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Nếu bạn đăng kí nhận thông tin liên quan đến Covid-19, bạn có thể\ncung cấp địa chỉ email hoặc số điện thoại trên form đăng kí của chúng tôi. </span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><i><span lang=EN style='font-size:12.0pt;line-height:\n115%;color:#212529'>II.2. Sử dụng thông tin</span></i></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Chúng tôi sử dụng thông tin cá nhân của bạn để nâng cao chất lượng\ncủa Dịch vụ, để gửi tới bạn các thông báo về dịch vụ mới của\nVietnamcovid19.info hoặc dịch vụ của bên thứ ba mà chúng tôi tin rằng sẽ hữu\ních với bạn.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Chúng tôi có thể sử dụng thông tin cá nhân của bạn trong việc điều\ntra, nghiên cứu hoặc phân tích để vận hành và nâng cấp các kỹ thuật của\nVietnamcovid19.info và Dịch vụ.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Chúng tôi có thể sử dụng thông tin cá nhân của bạn để xác định\nxem liệu bạn có thể quan tâm đến các sản phẩm hay dịch vụ của bên thứ ba nào\nkhông.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Về nguyên tắc, chúng tôi không cung cấp cho bên thứ ba thông tin\ncá nhân của bạn trừ các trường hợp sau:</span></p>\n\n<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'><span\nlang=EN style='font-size:12.0pt;line-height:115%;font-family:Roboto;color:#212529'>●<span\nstyle='font:7.0pt \"Times New Roman\"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span\nlang=EN style='font-size:12.0pt;line-height:115%;color:#212529'>Bạn đồng ý để\nchúng tôi cung cấp thông tin cá nhân của bạn cho bên thứ ba; và/hoặc</span></p>\n\n<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'><span\nlang=EN style='font-size:12.0pt;line-height:115%;font-family:Roboto;color:#212529'>●<span\nstyle='font:7.0pt \"Times New Roman\"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span\nlang=EN style='font-size:12.0pt;line-height:115%;color:#212529'>Chúng tôi cho rằng\nviệc cung cấp thông tin cá nhân của bạn cho bên thứ ba là cần thiết, ví dụ nhằm\ntuân theo các yêu cầu pháp lý, ngăn chặn tội phạm hoặc bảo vệ an ninh quốc gia,\nhay bảo vệ an toàn cá nhân của những người sử dụng hoặc công chúng, v.v...;\nvà/hoặc</span></p>\n\n<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'><span\nlang=EN style='font-size:12.0pt;line-height:115%;font-family:Roboto;color:#212529'>●<span\nstyle='font:7.0pt \"Times New Roman\"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span\nlang=EN style='font-size:12.0pt;line-height:115%;color:#212529'>Bên thứ ba là đối\ntượng mua lại toàn bộ hay phần lớn pháp nhân sở hữu Vietnamcovid19.info và Dịch\nvụ; và/hoặc</span></p>\n\n<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'><span\nlang=EN style='font-size:12.0pt;line-height:115%;font-family:Roboto;color:#212529'>●<span\nstyle='font:7.0pt \"Times New Roman\"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span\nlang=EN style='font-size:12.0pt;line-height:115%;color:#212529'>Thông tin cá nhân\nlà thông tin vô danh về khách ghé thăm Vietnamcovid19.info. Chúng tôi có thể\nchia sẻ loại thông tin này cho bên thứ ba để họ có thể tìm hiểu về các loại\nkhách tới thăm Vietnamcovid19.info và cách họ sử dụng Dịch vụ.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><i><span lang=EN style='font-size:12.0pt;line-height:\n115%;color:#212529'>II.3. Bảo mật</span></i></b></p>\n\n<p class=MsoNormal><b><i><span lang=EN style='font-size:12.0pt;line-height:\n115%;color:#212529'>&nbsp;</span></i></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;\ncolor:#212529'>Mật khẩu truy cập tài khoản của tất cả các thành viên của\nVietnamcovid19.info đều được Vietnamcovid19.info bảo vệ. Tuy nhiên, an ninh mạng\nkhông an toàn tuyệt đối, vì thế Vietnamcovid19.info không chịu trách nhiệm về\nnhững thiệt hại có thể xảy ra.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n</div>"
+}

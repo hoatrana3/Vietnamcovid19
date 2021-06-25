@@ -1,0 +1,58 @@
+.social-link-card {
+
+  display: inline-block;
+  min-height: 50px;
+  background-color: white;
+  box-shadow: $map-box-shadow;
+  border-radius: 10px;
+
+  padding: 10px 20px;
+  margin: 10px;
+
+  color: black;
+  font-weight: 500;
+
+  @include transition($transition-base);
+
+ .card-content {
+
+   display: flex;
+   align-items: center;
+
+   .content-text {
+     font-size: .9em;
+   }
+
+   i {
+     font-size: 2em;
+     margin-right: 10px;
+     @include transition($transition-base);
+   }
+ }
+
+  &.for-youtube {
+    i {
+      color: rgb(238, 15, 15);
+    }
+
+    &:hover {
+      background-color: rgb(238, 15, 15);
+      color: white;
+
+      i { color: white }
+    }
+  }
+
+  &.for-twitter {
+    i {
+      color: rgb(0, 172, 237);
+    }
+
+    &:hover {
+      background-color: rgb(0, 172, 237);
+      color: white;
+
+      i { color: white }
+    }
+  }
+}

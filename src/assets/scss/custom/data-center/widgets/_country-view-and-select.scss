@@ -1,0 +1,57 @@
+.country-view-and-select {
+
+  .selected-nation {
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    .nation-flag {
+
+      line-height: 1 !important;
+
+      i {
+        font-size: 1.3em;
+      }
+    }
+
+    .nation-name {
+      font-size: 1.3em;
+      font-weight: bold;
+
+      padding-right: 35px;
+    }
+
+    .nation-toggle-select {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(8px, -17%);
+
+      .vs-button__content .fas {
+        font-size: .9rem !important;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      .nation-flag i {
+        font-size: 1.15em;
+      }
+
+      .nation-name {
+        font-size: 1.1em;
+        padding-right: 33px;
+      }
+
+      .nation-toggle-select {
+
+        transform: translate(5px, -22%);
+
+        .vs-button__content .fas {
+          font-size: .8rem !important;
+        }
+      }
+    }
+  }
+}

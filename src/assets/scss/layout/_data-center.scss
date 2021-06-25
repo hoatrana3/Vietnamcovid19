@@ -1,0 +1,125 @@
+#covid-data-center-container {
+
+  overflow-y: scroll !important;
+
+  #center-map-wrapper {
+    width: 100%;
+    height: calc(70% + #{$dashboard-topbar-height});
+
+    background-color: rgb(23,38,60);
+
+    #map-container {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .center-body {
+    position: relative;
+
+    margin-top: -100px;
+    padding: 0 30px 20px 30px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 10px 20px 10px;
+    }
+
+    .body-top {
+      padding: 0 20px 0 20px;
+
+      display: flex;
+      align-items: center;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0 10px 0 10px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        padding: 0;
+      }
+
+      .map-text-date {
+        display: inline-block;
+
+        .custom-datetime {
+
+          position: relative;
+
+          .custom-datetime-input {
+            padding: 5px 30px 5px 10px;
+
+            background: transparent;
+
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
+
+            border: 1px solid white;
+            border-radius: 0.25rem;
+
+            width: 200px;
+
+            box-shadow: $box-shadow;
+
+            cursor: pointer;
+
+            @include transition($transition-base);
+
+            &:hover {
+              background-color: $main-light-green-color;
+              border-color: $main-light-green-color;
+            }
+
+            @include media-breakpoint-down(sm) {
+              width: 160px;
+              font-size: 1em;
+            }
+          }
+
+          &:after {
+            font-family: "Font Awesome 5 Free";
+            content: '\f073';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 10px;
+            color: white;
+
+            @include media-breakpoint-down(sm) {
+              right: 12.5px;
+              font-size: .9em;
+              transform: translate(0, -55%);
+            }
+          }
+        }
+      }
+
+      .map-options {
+        margin-left: auto;
+        color: white;
+        display: inline-block;
+        text-align: right;
+
+        i {
+          cursor: pointer;
+          font-size: 1.5em;
+
+          border-radius: 50%;
+          box-shadow: $box-shadow;
+
+          @include transition($transition-base);
+
+          &:hover {
+            color: $main-light-green-color
+          }
+
+          @include media-breakpoint-down(sm) {
+            font-size: 1.4em;
+          }
+        }
+      }
+    }
+  }
+}

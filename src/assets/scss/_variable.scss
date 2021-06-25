@@ -1,0 +1,42 @@
+/*******************************/
+// Custom Variables
+/*******************************/
+
+$map-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+
+$loader-zindex: 999999;
+
+$dashboard-topbar-height: 65px;
+$dashboard-topbar-zindex: 100;
+
+$drawer-wrapper-zindex: 1001;
+$drawer-header-zindex: 1002;
+$drawer-close-zindex: 1003;
+
+$map-bonus-options-wrapper-zindex: 500;
+$exit-marker-selected-wrapper-zindex: 501;
+$map-autocomplete-wrapper-zindex: 502;
+$map-daynight-switch-zindex: 503;
+$map-language-selector-zindex: 504;
+$map-legend-zindex: 510;
+$map-bottom-navigation-wrapper-zindex: 1000;
+
+$scroll-to-top-button-zindex: 1000;
+
+$cluster-suspectedcase-zindex: 300;
+$cluster-isolatedplace-zindex: $cluster-suspectedcase-zindex + 1;
+$cluster-deadcase-zindex: $cluster-isolatedplace-zindex + 1;
+$cluster-dischargecase-zindex: $cluster-deadcase-zindex + 1;
+$cluster-oldcase-zindex: $cluster-dischargecase-zindex + 1;
+$cluster-newcase-zindex: $cluster-oldcase-zindex + 1;
+
+$main-dark-green-color: #156015;
+$main-light-green-color: #3BB03C;
+$main-yellow-green-color: #BBD036;
+
+$dashboard-background: #f7f7f7;
+
+$new-case-color: #fd9d5a;
+$new-dead-color: #fd7178;
+
+$dead-color: #968cfd;

@@ -1,0 +1,419 @@
+.lcovid-map-wrapper {
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  position: relative;
+
+  background: rgb(245,245,245);
+
+  &.map-wrapper-night {
+    background: rgb(23,38,60);
+  }
+
+  #lcovid-map {
+    width: 100%;
+    height: 100%;
+
+    &.leaflet-container {
+      background: transparent !important;
+    }
+  }
+
+  .content-wrapper {
+    margin: 10px;
+
+    span {
+      font-weight: bold;
+    }
+
+    .bonus-options {
+      display: flex;
+      margin-top: 15px;
+      align-items: center;
+      justify-content: space-around;
+
+      .option-button {
+        border: none;
+        background: #6a688f;
+        color: white;
+        padding: 5px 10px;
+        border-radius: $border-radius;
+
+        @include transition($transition-base);
+
+        &:hover {
+          background: #32286a;
+          box-shadow: $map-box-shadow;
+        }
+      }
+    }
+  }
+
+  .exit-marker-selected-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 300px;
+    opacity: 0;
+    transform: translate(-50%, 100%);
+
+    z-index: $exit-marker-selected-wrapper-zindex;
+
+    @include transition($transition-base);
+
+    pointer-events: none;
+
+    &.exit-show {
+      transform: translate(-50%, 0%);
+      margin-bottom: 70px;
+      opacity: 1;
+    }
+
+    .btn-exit {
+      width: 100px;
+      transform: translate(50%, 0);
+      margin-top: 20px;
+      margin-left: calc(50% - 100px);
+
+      pointer-events: auto;
+    }
+
+    .hint {
+      font-size: 0.8em;
+      pointer-events: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 150px;
+
+      .hint {
+        font-size: 0.6em;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 130px;
+
+      .hint {
+        //display: none !important;
+      }
+    }
+  }
+
+  .map-autocomplete-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 10px;
+
+    z-index: $map-autocomplete-wrapper-zindex;
+
+    @include media-breakpoint-down(sm) {
+      // Full width parent - 2 times marginn (left + right)
+      width: calc(100% - 20px);
+    }
+  }
+
+  .map-daynight-switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: 10px;
+
+    z-index: $map-daynight-switch-zindex;
+
+    @include transition($transition-base);
+
+    @include media-breakpoint-down(sm) {
+      &.switch-hide {
+        transform: translate(0, calc(-100% - 20px));
+      }
+    }
+  }
+
+  .map-language-selector {
+    position: absolute;
+    top: 85px;
+    right: 0;
+
+    margin: 10px;
+
+    z-index: $map-language-selector-zindex;
+
+    @include transition($transition-base);
+
+    @include media-breakpoint-down(sm) {
+      top: 65px;
+
+      &.selector-hide {
+        transform: translate(calc(100% + 20px), 0);
+      }
+    }
+  }
+
+  .map-legend {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    z-index: $map-legend-zindex;
+
+    margin: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+
+    @include transition($transition-base);
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 50px;
+    }
+
+    &.legend-hide {
+      transform: translate(calc(-100% - 10px - 5px), 0);
+    }
+  }
+
+  .map-bonus-options-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 40px;
+    }
+
+    z-index: $map-bonus-options-wrapper-zindex;
+  }
+
+  .map-bottom-navigation-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 10px;
+
+    z-index: $map-bottom-navigation-wrapper-zindex;
+  }
+
+  .marker-icon-wrapper {
+
+    .marker-icon {
+      position: relative;
+
+      .icon-shadow {
+        position: absolute;
+        top: 28px;
+        left: -5.25px;
+      }
+
+      .icon-main {
+        position: absolute;
+
+        &.newCase {
+          top: 5px;
+
+          @keyframes pop {
+            0% {
+              transform: translate(0, 0) scale(1.25, 0.75);
+            }
+            50% {
+              transform: translate(0, -50%) scale(1, 1);
+            }
+            55% {
+              transform: translate(0, -50%) rotate(15deg);
+            }
+            60% {
+              transform: translate(0, -50%) rotate(-15deg);
+            }
+            65% {
+              transform: translate(0, -50%) rotate(15deg);
+            }
+            70% {
+              transform: translate(0, -50%) rotate(-15deg);
+            }
+            100% {
+              transform: translate(0, 0) scale(1.25, 0.75);
+            }
+          }
+
+          animation: pop 1.2s infinite;
+
+          /* For cutdown CPU */
+          will-change: transform;
+        }
+      }
+    }
+  }
+
+  .covid-cluster-wrapper {
+
+    // Set z-index for cluster
+    &.cluster-newCase[style] {
+      z-index: $cluster-newcase-zindex !important;
+    }
+
+    &.cluster-oldCase {
+      z-index: $cluster-oldcase-zindex !important;
+    }
+
+    &.cluster-suspectedCase {
+      z-index: $cluster-suspectedcase-zindex !important;
+    }
+
+    &.cluster-isolatedPlace {
+      z-index: $cluster-isolatedplace-zindex !important;
+    }
+
+    &.cluster-deadCase {
+      z-index: $cluster-deadcase-zindex !important;
+    }
+
+    &.cluster-dischargeCase {
+      z-index: $cluster-dischargecase-zindex !important;
+    }
+
+    .covid-cluster {
+
+      .cluster-bg {
+        width: 30px;
+        height: 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+        position: relative;
+
+        border-radius: 50%;
+
+        // Style for the number count of cluster
+        .cluster-count {
+          text-align: center;
+          z-index: 1;
+          color: white;
+          font-weight: bold;
+        }
+
+        // We set style for all of them in any case type
+        .bg-1, .bg-2, .bg-3, .bg-4 {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          position: absolute;
+        }
+
+        .bg-1 {
+          transform: scale(.8, .8);
+          opacity: .8;
+        }
+
+        .bg-2 {
+          transform: scale(.9, .9);
+          opacity: .6;
+        }
+
+        .bg-3 {
+          transform: scale(1.1, 1.1);
+          opacity: .4;
+        }
+
+        .bg-4 {
+          transform: scale(1.3, 1.3);
+          opacity: .2;
+        }
+      }
+
+      // And now style for specific case type
+      &.cluster-newCase {
+        .bg-1, .bg-2, .bg-3, .bg-4 {
+          background: #ED4A35;
+          opacity: 0;
+
+          /* For cutdown CPU */
+          will-change: transform, opacity;
+        }
+
+        @keyframes scaleIn {
+          from {
+            transform: scale(.8, .8);
+            opacity: 1;
+          }
+          to {
+            transform: scale(1.6, 1.6);
+            opacity: 0.3;
+          }
+        }
+
+        // Only newCase type will have animtion to make user pay their attentions
+        .bg-1 {
+          animation: scaleIn 0s infinite alternate;
+        }
+
+        .bg-2 {
+          animation: scaleIn 1s infinite alternate;
+        }
+
+        .bg-3 {
+          animation: scaleIn 2s infinite alternate;
+        }
+
+        .bg-4 {
+          animation: scaleIn 3s infinite alternate;
+        }
+      }
+
+      &.cluster-oldCase {
+        .bg-1, .bg-2, .bg-3, .bg-4 {
+          background: #FFA700;
+        }
+      }
+
+      &.cluster-suspectedCase {
+        .bg-1, .bg-2, .bg-3, .bg-4 {
+          background: #9976B1;
+        }
+      }
+
+      &.cluster-isolatedPlace {
+        .bg-1, .bg-2, .bg-3, .bg-4 {
+          background: #775FFF;
+        }
+      }
+
+      &.cluster-dischargeCase {
+        .bg-1, .bg-2, .bg-3, .bg-4 {
+          background: #59B9B5;
+        }
+      }
+
+      &.cluster-deadCase {
+        .bg-1, .bg-2, .bg-3, .bg-4 {
+          //background: #59B9B5;
+        }
+      }
+    }
+  }
+}
+
+.modal-setting-item {
+  display: flex;
+  align-items: center;
+
+  margin: 10px;
+
+  span {
+    margin-right: auto;
+    font-weight: 500;
+    font-size: .9em;
+  }
+
+  .custom-checkbox {
+    margin-left: auto !important;
+  }
+}

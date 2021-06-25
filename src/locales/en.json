@@ -1,0 +1,236 @@
+{
+  "general": {
+    "cases": "Cases",
+    "short-cases": "Cases",
+    "number-of-case": "Number of cases",
+    "age": "Age",
+    "gender": "Gender",
+    "city-or-province": "City or province",
+    "infection-source": "Source of infection",
+    "treatment-place": "Current treatment location",
+    "undefined": "[Undefined]",
+    "failed-fetch-data": "Failed to fetch data!",
+    "contact-us": "Contact us",
+    "terms-of-use": "Terms of use",
+    "back": "Back",
+    "see-all": "See all",
+    "social": "Social",
+    "empty-data": "There are no records to show",
+    "empty-filter-data": "There are no records matching your request",
+    "searching": "Searching...",
+    "close": "Close",
+    "open": "Open",
+    "dashboard": "Dashboard",
+    "more-info": "More info",
+    "share-with-friends": "Share with your friends",
+    "share-description": "Please share this website with your friends and relatives on social networks so that <b>everybody in Vietnam as well as the World can join together to win the pandemic</b>!",
+    "share-now": "Share now",
+    "read-now": "Read now",
+    "success-copy-to-share": "Copy successfully, please share it widely...",
+    "clear": "Clear",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "ppm": "per million (PPM)",
+    "overview": "Overview",
+    "data-center": "Data Center",
+    "exit": "Exit",
+    "next": "Next",
+    "select": "Select",
+    "not-remind-again": "Do not remind me again",
+    "remain": "Remaining"
+  },
+  "gender": {
+    "male": "Male",
+    "female": "Female",
+    "select-gender-to-see-more": "Choose a gender to see more details about those cases."
+  },
+  "ages": {
+    "from-to": "From {0} to {1} y/o",
+    "above": "Over {0} y/o"
+  },
+  "languages": {
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "hints": {
+    "hint": "Hint",
+    "user-manual": "User manual",
+    "select-nation": "<b>Select nation: </b>Click on the country on the interactive map or select through the country search box.",
+    "select-date": "<b>Select time: </b>Click on the displayed time frame to reselect the time that data is displayed on the interactive map.",
+    "select-case-type": "<b>Select case type: </b>Click on one of the 4 case overview boxes to select the type of case data to display on the interactive map",
+    "other-options": "<b>Other support tools: </b>Several other tools are also provided on the bottom right of the interactive map.",
+    "notes-on-data": "Notes on the data",
+    "approximate-data": "<b>Data is approximate: </b>The worldwide number of cases is constantly changing, the data we provide may be different and slower than actual reports.",
+    "accuracy-data": "<b>Accuracy of data: </b>The data we provide only includes information about cases that have been publicly disclosed by the country. Some countries may not have data because they haven't published data and report publicly.",
+    "differences-data": "<b>Differences of data: </b>Data in many places may have negligible differences because there are various sources that are tracking and aggregating Covid-19 data. They may update at different times and have different ways of gathering data.",
+    "more-about-vn": "More about Vietnam?",
+    "vn-in-data-center": "<b>Data Center: </b>See more information about the situation of Covid-19 in Vietnam at the Data Center (data, charts, history, ...).",
+    "vn-in-map": "<b>Vietnam Map: </b>Detailed map of all information about Covid-19 cases in Vietnam with many useful tools (search, location, details, infections, ...).",
+    "more-about-world": "More about World?",
+    "world-in-data-center": "<b>Data Center: </b>See more specific information about the situation of Covid-19 in countries around the world in the Data Center (figures, charts, history, ...).",
+    "useful-features": "Useful features",
+    "useful-features-desc": "We also provide other useful features to help you capture more information about the situation of Covid-19, please take a look!"
+  },
+  "cases": {
+    "case-num": "Case number",
+    "case-num-long": "Case number",
+    "confirmed": "Confirmed",
+    "being-treated": "Being treated",
+    "recovered": "Recovered",
+    "dead": "Dead",
+    "others": "Other cases",
+    "suspected": "Suspected infection",
+    "being-isolated": "Being isolated",
+    "in-mild-condition": "in mild condition",
+    "in-serious-condition": "in serious condition",
+    "confirmed-date": "Confirmed date",
+    "nationality": "Nationality",
+    "status": "Status",
+    "discharge-date": "Discharge date",
+    "dead-date": "Dead date",
+    "treatment-place": "Treatment place",
+    "infected-from": "Infected from",
+    "infected-to": "Infected to",
+    "route": "Route",
+    "isolated-date": "Isolated date",
+    "case-suspected": "Suspected case",
+    "see-all-relations": "See all related cases",
+    "zoom-to-case": "Zoom to selected case",
+    "note": "Note",
+    "type": {
+      "new-case": "New case (0 - 2 days)",
+      "old-case": "Old case (over 2 days)",
+      "discharge-case": "Recovered case",
+      "isolated-place": "Isolated place"
+    }
+  },
+  "places": {
+    "world": "World",
+    "worldwide": "Worldwide",
+    "around-world": "All around the world",
+    "vn": "Vietnam",
+    "region": "Region",
+    "nation": "Nation",
+    "other-nations": "Other nations",
+    "not-found-nation": "Can't find the nation you want",
+    "select-nation": "Select nation",
+    "in-nation": "In nation: {0}",
+    "regions": "Regions",
+    "nations": "Nations",
+    "all-regions": "All regions",
+    "all-nations": "All nations",
+    "world-regions": "Regions around the world",
+    "world-nations": "Nations around the world",
+    "g8-nations": "G8 nations",
+    "all-g8-nations": "All G8 nations",
+    "g20-nations": "G20 nations",
+    "all-g20-nations": "All G20 nations"
+  },
+  "center": {
+    "total-cases-by-day": "Total number of cases by day",
+    "changes-total-cases-by-day": "Changes in total number of cases by day"
+  },
+  "redirect": {
+    "go-to-vn-map": "Vietnam Map",
+    "go-to-vn-dashboard": "Vietnam Dashboard",
+    "go-to-world-dashboard": "World Dashboard",
+    "go-now": "Go now"
+  },
+  "dashboard": {
+    "header": {
+      "db-title": "Dashboard",
+      "covid19-info": "Covid-19 Information",
+      "world-covid19-info": "World Covid-19 information",
+      "vn-covid19-info": "Vietnam Covid-19 Information"
+    },
+    "body": {
+      "cases-overview": "Cases overview",
+      "cases-chart-tracking": "Tracking the overview of cases with visual chart",
+      "distribution-by": "Distribution of cases by {0}",
+      "covid19-timeline": "Covid-19 Timeline",
+      "data-sheet-by": "Data sheet by {0}",
+      "tracking-covid19-data-in": "Tracking Covid-19 data in {0}"
+    },
+    "footer": {
+      "we-are-improving": "We are making every effort to improve more...",
+      "copyright": "© Copyright Vietnamcovid19.info - All rights reserved"
+    },
+    "news": {
+      "lastest-news": "Lastest News",
+      "description": "Including the latest 20 news from quality news sites"
+    },
+    "timeline": {
+      "description": "Summary of all important information and events in different time periods"
+    },
+    "youtube": {
+      "covid-on-youtube": "Covid-19 on Youtube"
+    },
+    "table": {
+      "type-to-search": "Type to Search",
+      "total-infection": "Total infection",
+      "new-infection": "New infection",
+      "total-recoveries": "Total recoveries",
+      "total-deaths": "Total deaths",
+      "new-deaths": "New deaths",
+      "day-infection-rate": "24h new infection %",
+      "day-death-rate": "24h new deaths %",
+      "death-rate": "Death rate",
+      "pop-in-places": "Population (in infected places)",
+      "rate-pop-infected": "Rate of infected population",
+      "pop-density": "Population density (People / km2)",
+      "rate-urban-pop": "Rate of urban population",
+      "medium-age": "Average population age",
+      "show-in-grid": "Show data in grid",
+      "show-in-stack": "Show data in stack",
+      "landscape-to-see-more": "Rotate the screen horizontally to see more data in grid!",
+      "total-test":  "Total tests",
+      "total_test_percent" : "Total tests / population"
+    }
+  },
+  "map": {
+    "address": "Address",
+    "coordinate": "Coordinate",
+    "press": "Press",
+    "exit": "Exit",
+    "searched-place": "Searched place",
+    "your-location": "Your location",
+    "you-are-here": "You are here!",
+    "belong-to-nation": "Belonging to",
+    "click-on-the-map": "or click on space in the map",
+    "to-exit-detail-mode": "to exit detail-mode",
+    "map-settings": "Map settings",
+    "paracel-islands": "Paracel Islands",
+    "spratly-islands": "Spratly Islands",
+    "autocomplete-placeholder": "Address or case number to find?",
+    "settings": {
+      "show-info-board": "Show information board",
+      "collapse-cases": "Collapse cases",
+      "click-map-to-exit-detail": "Click on space in the map to exit detail-mode",
+      "auto-adjust-day-and-night": "Auto-adjust day-and-night",
+      "cover-all-relation": "Auto-adjust vision to cover all related cases"
+    },
+    "tool": {
+      "toolbar": "Toolbar",
+      "zoom-in": "Zoom in",
+      "zoom-out": "Zoom out",
+      "reset-default": "Reset to default"
+    },
+    "if-drawer": {
+      "map-title": "<h5>Information Map for</h5><h4>Covid-19 in Vietnam</h4>",
+      "fb-social": "Facebook group",
+      "donate-prevent-pandemic": "Donation for pandemic prevention",
+      "community-feedback": "Feedback of community",
+      "government-info": "Information from the Government"
+    }
+  },
+  "errors": {
+    "failed-locate": "Failed to locate",
+    "cant-get-your-location": "Can not get your location!",
+    "error-connection": "Failed to fetch data",
+    "error-ask-refesh": "New data may be updating, please try reloading the page in a few minutes.",
+    "no-permission-locate": "No location access on the browser, please check your settings.",
+    "country-not-updated": "Country not updated",
+    "country-not-updated-explain": "Sorry, the country you selected is not currently updated to the map, you can view more of the other countries we've provided."
+  },
+  "terms-of-use-content": "<div class=WordSection1>\n\n<p class=MsoNormal><b><span lang=EN style='font-size:15.0pt;line-height:115%'>TERMS\nOF USE</span></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>This\nagreement of use and privacy (hereinafter referred to as the\n&quot;Agreement&quot;) is entered into by and between you (&quot;you&quot;) and\nVietnamcovid19.info (&quot;Vietnamcovid19.info&quot; or &quot;us&quot;)\nregarding the use of any or all types of information on http://vietnamcovid19.info/.\nBy using the Services, you agree to be bound by these terms and conditions.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>The\nterm &quot;you&quot; refers to all individuals and / or organizations accessing\nVietnamcovid19.info for any reason.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><span lang=EN style='font-size:12.0pt;line-height:115%'>I.\nTerms of use</span></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><i><span lang=EN style='font-size:12.0pt;line-height:\n115%'>I.1. Rights associated with the Service.</span></i></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>Vietnamcovid19.info\nowns and maintains all intellectual property rights to its Services but\nVietnamcovid19.info does not claim to have intellectual property rights to the\ninformation posted on Vietnamcovid19.info.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>Vietnamcovid19.info\nis also not responsible for the information, services and content of connected\nwebsites. You are solely responsible for the use and exploitation of this\ninformation.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>The\ninformation on Vietnamcovid19.info is for reference only and gathered from\ninformation published by the Ministry of Health https://ncov.moh.gov.vn/, the\nVietnamese government portal https: // www. facebook.com/thongtinchinhphu/, the\nofficial information page on supporting IT solutions, prevention and control of\nCovid-19 https://ncovi.vn/ as well as licensed press information websites in\nVietnam.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>Covid-19\ninformation of the world is taken from WHO source https://who.sprinklr.com/,\nJohns Hopkins University https://coronavirus.jhu.edu/map.html and Worldometers\nwebsite https: // www .worldometers.info / coronavirus /</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>Free\ninformation of community service to contribute to repelling the Covid-19\nepidemic in the World and Vietnam. You should always consult the governments\nand Ministry of Healths information for the most up-to-date information.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><i><span lang=EN style='font-size:12.0pt;line-height:\n115%'>I.2. Use and termination of use of the Service.</span></i></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>You\nmay use the Service's content only for your own personal use (specifically not\nfor commercial purposes) and may not copy, change, modify, create derivative\nworks or publicly display any content of the Service. For example, you may not\nuse the Service to sell a product or service; or use the Services to increase\nthe number of visits to your site for commercial purposes; or use the results\nfrom the Service and then format and publicly display them, or use other tools\nor materials to track or copy any content from the Service. If you are unsure\nwhether your intended use of the Service is authorized, please contact us.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>Vietnamcovid19.info\nwill not be responsible for disruption, downtime, loss or misrepresentation of\ndata from attacks by other individuals or organizations, as well as for\ntechnical problems while providing Service level.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>Vietnamcovid19.info\nis also not responsible for losses arising from the use of the Service or from\nyour interaction with other users.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>Vietnamcovid19.info\nreserves the right to unilaterally suspend or terminate the Service or your\naccess to the Service.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><span lang=EN style='font-size:12.0pt;line-height:115%'>II.\nConfidentiality agreement</span></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><i><span lang=EN style='font-size:12.0pt;line-height:\n115%'>II.1. Information we collect</span></i></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>Every\ntime you access the Service, the Vietnamcovid19.info system will use cookies\nand other techniques to record your activities on Vietnamcovid19.info. The\nserver of Vietnamcovid19.info will also automatically record information when\nyou access this page and use the Services including but not limited to URL, IP\naddress, browser type, language, access date and time. use the Service.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>If\nyou sign up to receive information regarding Covid-19, you can provide your\nemail address or phone number on our registration form.</span></p>\n\n<p class=MsoNormal><b><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></b></p>\n\n<p class=MsoNormal><b><i><span lang=EN style='font-size:12.0pt;line-height:\n115%'>II.2. Use the information</span></i></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>We\nuse your personal information to improve the quality of the Service, to send\nyou notifications about new services of Vietnamcovid19.info or third party\nservices that we believe will be helpful.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>We\nmay use your personal information in investigations, research or analysis to\noperate and upgrade Vietnamcovid19.info's techniques and the Services.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>We\nmay use your personal information to determine whether you may be interested in\nany third party products or services.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>In\nprinciple, we do not provide third parties with your personal information\nexcept in the following cases:</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'><span\nlang=EN style='font-size:12.0pt;line-height:115%'>●<span style='font:7.0pt \"Times New Roman\"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span><span lang=EN style='font-size:12.0pt;line-height:115%'>You agree\nto us providing your personal information to third parties; and / or</span></p>\n\n<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'><span\nlang=EN style='font-size:12.0pt;line-height:115%'>●<span style='font:7.0pt \"Times New Roman\"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span><span lang=EN style='font-size:12.0pt;line-height:115%'>We\nbelieve it is necessary to provide your personal information to third parties,\nfor example in order to comply with legal requirements, prevent crime or\nprotect national security, or protect fish safety. personalities of users or\nthe public, etc .; and / or</span></p>\n\n<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'><span\nlang=EN style='font-size:12.0pt;line-height:115%'>●<span style='font:7.0pt \"Times New Roman\"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span><span lang=EN style='font-size:12.0pt;line-height:115%'>A third\nparty is the entity that acquires all or most of the legal entity that owns\nVietnamcovid19.info and the Services; and / or</span></p>\n\n<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'><span\nlang=EN style='font-size:12.0pt;line-height:115%'>●<span style='font:7.0pt \"Times New Roman\"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span><span lang=EN style='font-size:12.0pt;line-height:115%'>Personal\ninformation is anonymous information about visitors to Vietnamcovid19.info. We\nmay share this type of information with third parties so they can learn about\nthe types of visitors to Vietnamcovid19.info and how they use the Services.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><b><span lang=EN style='font-size:12.0pt;line-height:115%'>III.\nSecurity</span></b></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>The\npassword to access the accounts of all members of Vietnamcovid19.info is\nprotected by Vietnamcovid19.info. However, network security is not completely\nsecure, so Vietnamcovid19.info is not responsible for any damages that may\noccur.</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n<p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>\n\n</div>"
+}

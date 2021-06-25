@@ -1,0 +1,27 @@
+.vietnam-dashboard-wrapper {
+
+  .social-wrapper {
+    min-height: 350px;
+  }
+
+  .dashboard-responsive {
+    .media {
+      @include media-breakpoint-between(sm, md) {
+        @include media-flex();
+
+        @include media-breakpoint-only(md) {
+          @include media-flex();
+        }
+      }
+    }
+  }
+
+  #gender-amchart {
+    width: 100%;
+    height: 390px;
+
+    @include media-breakpoint-down(sm) {
+      height: 600px;
+    }
+  }
+}

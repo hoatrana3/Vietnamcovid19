@@ -1,0 +1,124 @@
+#covid-dashboard-container {
+
+  background-color: $dashboard-background;
+
+  overflow-y: scroll !important;
+
+  .dashboard-body {
+    width: 100%;
+    background: inherit;
+  }
+}
+
+@import "vietnam-dashboard";
+@import "world-dashboard";
+
+.dashboard-wrapper {
+
+  .body-main-side {
+    padding: 3rem 20px 30px;
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+
+      padding-top: 2.5rem;
+    }
+  }
+
+  .body-feed-side {
+
+    padding: 30px 20px 0 20px;
+
+    margin-top: 13vh;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 3rem
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 0
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .news-post-wrapper {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .youtube-list-wrapper {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .timeline-wrapper {
+      border-radius: 10px;
+      border: 1px solid $main-light-green-color;
+      width: 100%;
+      height: 600px;
+      overflow: scroll;
+      padding: 20px 30px;
+    }
+
+    .news-page-link-wrapper {
+      width: 100%;
+      overflow: scroll;
+    }
+
+    #fb-group-wrapper {
+      min-width: 100%;
+      min-height: 100%;
+
+      height: auto;
+
+      padding-left: 10px;
+
+      overflow: scroll;
+
+      div:first-of-type {
+        &.invisible {
+          display: none !important;
+        }
+      }
+    }
+
+    .youtube-link-wrapper {
+
+      width: 100%;
+
+      .link-item {
+        padding: 0 10px;
+
+        display: flex;
+        align-items: center;
+
+        i {
+          color: rgb(238, 15, 15);
+        }
+
+        &:hover {
+          i {
+            color: rgb(144, 3, 12);
+          }
+        }
+      }
+    }
+  }
+}
+
+.news-wrapper {
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 5rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 2rem;
+  }
+}

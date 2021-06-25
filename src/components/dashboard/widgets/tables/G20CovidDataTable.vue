@@ -1,0 +1,430 @@
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
+    <div>
+        <div class="row">
+            <div class="col-md-3 col-sm-5 offset-md-2 mt-3 mb-1">
+                <b-form-group class="mb-0">
+                    <b-form-select
+                            v-model="selectedShowType"
+                            size="sm"
+                            :options="showTypes"
+                    ></b-form-select>
+                    <div v-if="showShowTypeHint" class="show-type-hint"><b>{{$t('hints.hint')}}: </b>{{$t('dashboard.table.landscape-to-see-more')}}
+                    </div>
+                </b-form-group>
+            </div>
+            <div class="col-md-5 col-sm-7 mt-3 mb-1">
+                <b-form-group class="mb-0">
+                    <b-input-group size="sm">
+                        <b-form-input
+                                v-model="filter"
+                                type="search"
+                                :placeholder="$t('dashboard.table.type-to-search')"
+                        ></b-form-input>
+                        <b-input-group-append>
+                            <b-button :disabled="!filter" @click="filter = ''">{{$t('general.clear')}}</b-button>
+                        </b-input-group-append>
+                    </b-input-group>
+                </b-form-group>
+            </div>
+            <div class="col-12">
+                <b-tabs v-model="tabTimeIndex" pill fill justified class="custom-tabs mt-3">
+                    <b-tab :title="$t('general.today')"></b-tab>
+                    <b-tab :title="$t('general.yesterday')"></b-tab>
+                </b-tabs>
+            </div>
+        </div>
+        <b-table id="g20-covid-table"
+                 show-empty
+                 :empty-text="$t('general.empty-data')"
+                 :empty-filtered-text="$t('general.empty-filter-data')"
+                 bordered
+                 outlined
+                 hover
+                 responsive
+                 small
+                 :sticky-header="stickyHeader"
+                 :no-border-collapse="noBorderCollapse"
+                 :stacked="stacked"
+                 class="my-3 custom-b-table table-responsive"
+                 :per-page="perPage"
+                 :current-page="currentPage"
+                 :filter="filter"
+                 @filtered="onFiltered"
+                 :items="tabTimeIndex === 0 ? covidTableData : covidHistoryTableData"
+                 :fields="fields">
+            <template v-slot:cell(country)="data">
+                <span class="font-weight-bold cusor-pointer" @click="goToDataCenter(data.item.iso2)">
+                    {{data.value}}
+                </span>
+            </template>
+            <template v-slot:cell(country_vn)="data">
+                <span class="font-weight-bold cusor-pointer" @click="goToDataCenter(data.item.iso2)">
+                    {{data.value}}
+                </span>
+            </template>
+            <template v-slot:cell(new_case)="data">
+                <span :class="{'font-weight-semibold text-new-case': (parseInt(data.value) > 0)}">
+                    {{ `${parseInt(data.value) > 0 ? '+' : ''}${data.value}` }}
+                </span>
+            </template>
+            <template v-slot:cell(new_deaths)="data">
+                <span :class="{'font-weight-semibold text-new-dead': (parseInt(data.value) > 0)}">
+                    {{ `${parseInt(data.value) > 0 ? '+' : ''}${data.value}` }}
+                </span>
+            </template>
+        </b-table>
+        <b-pagination
+                v-if="usePagination"
+                pills
+                align="center"
+                v-model="currentPage"
+                :total-rows="totalRows"
+                :per-page="perPage"
+                class="custom-b-pagination"
+                aria-controls="g20-covid-table"
+        ></b-pagination>
+    </div>
+</template>
+
+<script>
+    import NumeralUtils from "../../../../utils/NumeralUtils";
+    import _ from 'lodash';
+    import DashboardUtils from "../../../../utils/DashboardUtils";
+    import DeviceUtils from "../../../../utils/DeviceUtils";
+    import i18n, {LANGUAGES} from '../../../../i18n';
+
+    export default {
+        name: "G20CovidDataTable",
+        data() {
+            return {
+                selectedShowType: 0,
+                showTypes: DashboardUtils.TABLE_SHOW_TYPES,
+
+                currentPage: 1,
+
+                covidTableData: [],
+                covidHistoryTableData: [],
+
+                g20Countries: ['AR', 'AU', 'BR', 'CA', 'CN', 'DE', 'FR', 'IN', 'ID', 'IT', 'JP', 'MX' , 'RU', 'SA', 'ZA', 'KR', 'TR', 'GB', 'US'],
+
+                bTableObserver: null,
+
+                totalRows: 1,
+
+                tabTimeIndex: 1,
+
+                fields: [
+                    {
+                        key: (i18n.locale === LANGUAGES.EN) ? 'country' : 'country_vn',
+                        label: this.$t('places.nation'),
+                        sortable: true,
+                        stickyColumn: true,
+                        isRowHeader: true
+                    },
+                    {
+                        key: 'total_case',
+                        label: this.$t('dashboard.table.total-infection'),
+                        sortable: true,
+                        stickyColumn: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonNumber(value)
+                        }
+                    },
+                    {
+                        key: 'current_deaths_rate',
+                        label: this.$t('dashboard.table.death-rate'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonPercentageWithDecimal(value / 100)
+                        }
+                    },
+                    {
+                        key: 'new_case',
+                        label: this.$t('dashboard.table.new-infection'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonNumber(value)
+                        }
+                    },
+                    {
+                        key: 'new_case_percent',
+                        label: this.$t('dashboard.table.day-infection-rate'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonPercentageWithDecimal(value / 100)
+                        }
+                    },
+                    {
+                        key: 'total_deaths',
+                        label: this.$t('dashboard.table.total-deaths'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonNumber(value)
+                        }
+                    },
+                    {
+                        key: 'new_deaths',
+                        label: this.$t('dashboard.table.new-deaths'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonNumber(value)
+                        }
+                    },
+                    {
+                        key: 'new_deaths_percent',
+                        label: this.$t('dashboard.table.day-death-rate'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonPercentageWithDecimal(value / 100)
+                        }
+                    },
+                    {
+                        key: 'total_recovered',
+                        label: this.$t('dashboard.table.total-recoveries'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonNumber(value)
+                        }
+                    },
+                    {
+                        key: 'population',
+                        label: this.$t('dashboard.table.pop-in-places'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonNumber(value)
+                        }
+                    },
+                    {
+                        key: 'population_case_percent',
+                        label: this.$t('dashboard.table.rate-pop-infected'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonPercentageWithDecimal(value / 100)
+                        }
+                    },
+                    {
+                        key: 'density',
+                        label: this.$t('dashboard.table.pop-density'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonNumber(value)
+                        }
+                    },
+                    {
+                        key: 'urban_population',
+                        label: this.$t('dashboard.table.rate-urban-pop'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonPercentageWithDecimal(value / 100)
+                        }
+                    },
+                    {
+                        key: 'med_age',
+                        label: this.$t('dashboard.table.medium-age'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonNumber(value)
+                        }
+                    },
+                    {
+                        key: 'total_test',
+                        label: this.$t('dashboard.table.total-test'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonNumber(value)
+                        }
+                    },
+                    {
+                        key: 'total_test_percent',
+                        label: this.$t('dashboard.table.total_test_percent'),
+                        sortable: true,
+                        class: 'text-right',
+                        formatter: value => {
+                            return NumeralUtils.formatCommonPercentageWithDecimal(value / 100)
+                        }
+                    },
+                ],
+
+                filter: null
+            }
+        },
+        computed: {
+            covidData() {
+                return this.$store.getters.globCovidData
+            },
+            covidHistoryData() {
+                return this.$store.getters.globCovidHistoryData
+            },
+            stickyHeader() {
+                return this.selectedShowType === 0
+            },
+            noBorderCollapse() {
+                return this.stickyHeader;
+            },
+            stacked() {
+                return this.selectedShowType === 1
+            },
+            usePagination() {
+                return this.stacked;
+            },
+            perPage() {
+                return this.usePagination ? 4 : (this.tabTimeIndex === 0 ? this.covidTableData.length : this.covidHistoryTableData.length)
+            },
+            showShowTypeHint() {
+                return DeviceUtils.isUsingMobileOrTablet() && !this.stacked;
+            }
+        },
+        watch: {
+            tabTimeIndex() {
+                this.totalRows = (this.tabTimeIndex === 0) ? this.covidTableData.length : this.covidHistoryTableData.length;
+            },
+            covidData() {
+                this.covidTableData = this.getFormattedData(this.covidData);
+                if (this.tabTimeIndex === 0) this.totalRows = this.covidTableData.length;
+            },
+            covidHistoryData() {
+                this.covidHistoryTableData = this.getFormattedData(this.covidHistoryData);
+                if (this.tabTimeIndex === 1) this.totalRows = this.covidHistoryTableData.length;
+            }
+        },
+        mounted() {
+            window.addEventListener(
+                "orientationchange",
+                () => {
+                    DashboardUtils.customizeBStickyCols(document.getElementById('g20-covid-table'))
+                }
+            );
+            this.observeDataTable()
+        },
+        beforeDestroy() {
+            this.bTableObserver.disconnect()
+        },
+        methods: {
+            getFormattedData(data) {
+                const formattedData = _.clone(data).filter(country => this.g20Countries.includes(country.iso2));
+
+                formattedData.unshift(this.calculateG20Data(formattedData));
+
+                formattedData.forEach(data => {
+                    data._cellVariants = {
+                        new_case_percent: DashboardUtils.get24hNewCaseRateVariant(data.new_case_percent),
+                        new_deaths_percent: DashboardUtils.get24hNewDeathRateVariant(data.new_deaths_percent),
+                        current_deaths_rate: DashboardUtils.getDeathRateVariant(data.current_deaths_rate)
+                    }
+                });
+
+                return formattedData
+            },
+
+            calculateG20Data(rawData) {
+                const result = {
+                    country: `${this.$t('places.all-g20-nations')} (${rawData.length})`,
+                    country_vn: `${this.$t('places.all-g20-nations')} (${rawData.length})`,
+                    region: this.$t('places.all-regions'),
+                    total_case: 0,
+                    new_case: 0,
+                    new_case_percent: 0,
+                    total_deaths: 0,
+                    new_deaths: 0,
+                    new_deaths_percent: 0,
+                    current_deaths_rate: 0,
+                    total_recovered: 0,
+                    population: 0,
+                    population_case_percent: 0,
+                    density: 0,
+                    med_age: 0,
+                    urban_population: 0,
+                    total_test: 0,
+                    total_test_percent: 0,
+                    iso2: 'WORLD'
+                };
+
+                rawData.forEach(data => {
+                    result.total_case += data.total_case;
+                    result.new_case += data.new_case;
+                    result.new_case_percent += data.new_case_percent;
+                    result.total_deaths += data.total_deaths;
+                    result.new_deaths += data.new_deaths;
+                    result.new_deaths_percent += data.new_deaths_percent;
+                    result.current_deaths_rate += data.current_deaths_rate;
+                    result.total_recovered += data.total_recovered;
+                    result.population += data.population;
+                    result.population_case_percent += data.population_case_percent;
+                    result.density += data.density;
+                    result.med_age += data.med_age;
+                    result.urban_population += data.urban_population;
+                    result.total_test += data.total_test
+                });
+
+                result.new_case_percent = (result.new_case * 100) / (result.total_case - result.new_case);
+                result.new_deaths_percent = (result.new_deaths * 100) / (result.total_case - result.new_deaths);
+                result.current_deaths_rate = (result.total_deaths * 100) / result.total_case;
+                result.population_case_percent = (result.total_case * 100) / result.population;
+                result.density /= rawData.length;
+                result.med_age /= rawData.length;
+                result.urban_population /= rawData.length;
+                result.total_test_percent = (result.total_test * 100) / result.population;
+
+                return result;
+            },
+
+            onFiltered(filteredItems) {
+                // Trigger pagination to update the number of buttons/pages due to filtering
+                this.totalRows = filteredItems.length;
+                this.currentPage = 1
+            },
+
+            observeDataTable() {
+                const tableDom = document.getElementById('g20-covid-table');
+
+                let addTimeout = null;
+                let removeTimeout = null;
+
+                this.bTableObserver = DashboardUtils.observeBTableOnAddData(
+                    tableDom,
+                    (addedRow) => {
+                        let rowIndex = addedRow.getAttribute("aria-rowindex");
+
+                        if (rowIndex != null) {
+                            if (addTimeout != null) {
+                                clearTimeout(addTimeout);
+                                addTimeout = null
+                            }
+
+                            addTimeout = setTimeout(() => DashboardUtils.customizeBStickyCols(tableDom), 200)
+                        }
+                    },
+                    (removedRow) => {
+                        let rowIndex = removedRow.getAttribute("aria-rowindex");
+
+                        if (rowIndex != null) {
+                            if (removeTimeout != null) {
+                                clearTimeout(removeTimeout);
+                                removeTimeout = null
+                            }
+                            removeTimeout = setTimeout(() => DashboardUtils.customizeBStickyCols(tableDom), 200)
+                        }
+                    }
+                )
+            },
+
+            goToDataCenter(countryIso) {
+                this.$router.push(`/dashboard/data-center?iso=${countryIso}`)
+            }
+        }
+    }
+</script>

@@ -1,0 +1,9 @@
+@import "dashboard/dashboard";
+@import "data-center";
+
+#app, #covid-map-container, #covid-dashboard-container , #covid-data-center-container{
+  height: 100%;
+  width: 100%;
+
+  overflow-x: hidden !important;
+}
